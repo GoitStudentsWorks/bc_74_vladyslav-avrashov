@@ -1,0 +1,46 @@
+import{a as L,b as f,i as v,S as x,N as k,K as T}from"./assets/vendor-DbKk-Jsd.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))r(t);new MutationObserver(t=>{for(const a of t)if(a.type==="childList")for(const p of a.addedNodes)p.tagName==="LINK"&&p.rel==="modulepreload"&&r(p)}).observe(document,{childList:!0,subtree:!0});function s(t){const a={};return t.integrity&&(a.integrity=t.integrity),t.referrerPolicy&&(a.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?a.credentials="include":t.crossOrigin==="anonymous"?a.credentials="omit":a.credentials="same-origin",a}function r(t){if(t.ep)return;t.ep=!0;const a=s(t);fetch(t.href,a)}})();const i={darkmodeToggle:document.querySelector(".darkmode-toggle-input"),body:document.body},b="selectedTheme";function m(e){e==="dark"?(i.body.classList.remove("theme-light"),i.body.classList.add("theme-dark"),i.darkmodeToggle.checked=!0):(i.body.classList.remove("theme-dark"),i.body.classList.add("theme-light"),i.darkmodeToggle.checked=!1)}function w(e){localStorage.setItem(b,e)}function E(){const e=localStorage.getItem(b);e?m(e):(m("light"),w("light"))}function B(){const e=i.darkmodeToggle.checked?"dark":"light";m(e),w(e)}E();i.darkmodeToggle.addEventListener("change",B);const d={openMenuBtn:document.querySelector(".open-mobile-menu-btn"),closeMenuBtn:document.querySelector(".close-mobile-menu-btn"),mobileMenu:document.querySelector(".modal-box"),navLinks:document.querySelectorAll(".mobile-menu-nav-item-link")};function M(){d.mobileMenu.classList.add("is-open"),document.body.style.overflow="hidden"}function _(){d.mobileMenu.classList.remove("is-open"),document.body.style.overflow=""}d.openMenuBtn.addEventListener("click",M);d.closeMenuBtn.addEventListener("click",_);d.navLinks.forEach(e=>{e.addEventListener("click",o=>{o.preventDefault(),_();const s=e.getAttribute("href");if(s&&s!=="#"){const r=document.querySelector(s);r&&r.scrollIntoView({behavior:"smooth",block:"start"})}})});const q="/bc_74_vladyslav-avrashov/assets/manage-finances@1x-CV7JT6HV.jpg",J="/bc_74_vladyslav-avrashov/assets/manage-finances@2x-Ghca0UNm.jpg",C="/bc_74_vladyslav-avrashov/assets/organic1x-DgmSNOwn.jpg",N="/bc_74_vladyslav-avrashov/assets/organic2x-D86FJxup.jpg",$="/bc_74_vladyslav-avrashov/assets/discover@1x-5JF_P4sC.jpg",R="/bc_74_vladyslav-avrashov/assets/discover@2x-CSqeNpRE.jpg",P="/bc_74_vladyslav-avrashov/assets/transforming@1x-4qEV6A6Q.jpg",O="/bc_74_vladyslav-avrashov/assets/transforming@2x-B9hlK9hC.jpg",A="/bc_74_vladyslav-avrashov/assets/mimino1x-BXBdo03j.jpg",G="/bc_74_vladyslav-avrashov/assets/mimino2x-Bu8TO7FJ.jpg",I="/bc_74_vladyslav-avrashov/assets/reviving-traditions@1x-ChT6sPVh.jpg",F="/bc_74_vladyslav-avrashov/assets/reviving-traditions@2x-CnSUCKPJ.jpg",V="/bc_74_vladyslav-avrashov/assets/a-brand@1x-D0kRnoxY.jpg",K="/bc_74_vladyslav-avrashov/assets/a-brand@2x-Bz2KWXql.jpg",D="/bc_74_vladyslav-avrashov/assets/bodyshape@1x-BrtTnaqT.jpg",H="/bc_74_vladyslav-avrashov/assets/bodyshape@2x-E8OrVE7Q.jpg",z="/bc_74_vladyslav-avrashov/assets/fresh-harvest@1x-BYBmkmt_.jpg",Y="/bc_74_vladyslav-avrashov/assets/fresh-harvest@2x-PvTTqAFi.jpg",U="/bc_74_vladyslav-avrashov/assets/turn-on@1x-BXZLeYqn.jpg",X="/bc_74_vladyslav-avrashov/assets/turn-pn@2x-otGTicgo.jpg",g=[{title:"Wallet webservice",url1:q,url2:J,technologies:"React, JavaScript, Node JS, Git"},{title:"Green harvest webservice",url1:C,url2:N,technologies:"React, JavaScript, Node JS, Git"},{title:"English Exellence webservice",url1:$,url2:R,technologies:"React, JavaScript, Node JS, Git"},{title:"Power pulse webservice",url1:P,url2:O,technologies:"React, JavaScript, Node JS, Git"},{title:"Mimino website",url1:A,url2:G,technologies:"React, JavaScript, Node JS, Git"},{title:"Vyshyvanka vibes Landing Page",url1:I,url2:F,technologies:"React, JavaScript, Node JS, Git"},{title:"Chego jewelry website",url1:V,url2:K,technologies:"React, JavaScript, Node JS, Git"},{title:"Energy flow webservice",url1:D,url2:H,technologies:"React, JavaScript, Node JS, Git"},{title:"fruitbox online store",url1:z,url2:Y,technologies:"React, JavaScript, Node JS, Git"},{title:"Starlight studio landing page",url1:U,url2:X,technologies:"React, JavaScript, Node JS, Git"}],Z="/bc_74_vladyslav-avrashov/assets/icons-BcwaTOFK.svg#visit-arrow",S=e=>e.map(o=>{const{title:s,url1:r,url2:t,technologies:a}=o;return`
+      <li class="project-card">
+        <picture>
+        <source srcset="${r}" media="(max-width: 767px)" />
+          <source srcset="${t}" media="(min-width: 768px)" />
+         <img
+            class="my-project-picture"
+           src="${t}"
+            alt="${s}"
+            loading="lazy"
+          />
+        </picture>
+        <p class="technologies-list">${a}</p>
+        <h3 class="project-description">${s}</h3>
+        <div class="link-container">
+          <a class="visit-link" href="#">
+            visit
+            <svg class="visit-arrow" width="14" height="14">
+              <use href=${Z}></use>
+            </svg>
+          </a>
+        </div>
+      </li>
+    `}).join(""),n={projectsList:document.querySelector(".js-project-cards-list"),loadMoreBtn:document.querySelector(".js-load-more-btn")};let h=0,u=3;const Q=()=>{const e=g.slice(h,u),o=S(e);n.projectsList.innerHTML=o};Q();const j=()=>{h+=3,u+=3;const e=g.slice(h,u),o=S(e);if(n.projectsList.insertAdjacentHTML("beforeend",o),setTimeout(()=>{const s=n.projectsList.querySelector(".project-card").getBoundingClientRect().height;window.scrollBy({top:s,behavior:"smooth"})},0),u>=g.length){n.loadMoreBtn.classList.add("visually-hidden"),n.loadMoreBtn.removeEventListener("click",j);return}};n.loadMoreBtn.addEventListener("click",j);new L(".faq-accordion",{openOnInit:[0],showMultiple:!1,elementClass:"ac",triggerClass:"ac-trigger",panelClass:"ac-text",activeClass:"is-open"});const W=({author:e,avatar_url:o,review:s})=>`
+  <li class="swiper-slide">
+    <p class="swiper-description" tabindex="-1">${s}</p>
+    <div class="swiper-user-info">
+      <img
+        class="swiper-user-img"
+        src="${o}"
+        alt="${e}"
+        width="40"
+        height="40"
+      />
+      <h3 class="swiper-user-name">${e}</h3>
+    </div>
+  </li>`,ee=e=>{const o=e.map(s=>W(s)).join("");c.list.insertAdjacentHTML("beforeend",o)};f.defaults.baseURL="https://portfolio-js.b.goit.study/api/reviews/";const te=async()=>{try{return(await f.get()).data}catch(e){throw console.log("Something went wrong with receiving feedback"),e}},c={list:document.querySelector(".swiper-wrapper"),buttons:document.querySelector(".swiper-buttons"),errorMsg:document.querySelector(".review-not-found")},se=()=>{new x(".swiper",{modules:[k,T],spaceBetween:32,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},keyboard:{enabled:!0,onlyInViewport:!1},breakpoints:{1280:{slidesPerView:2},0:{slidesPerView:1}},allowSlideNext:!0})},oe=async()=>{try{const e=await te();if(!e.length){c.buttons.classList.add("is-hidden"),c.errorMsg.classList.remove("is-hidden");return}ee(e),se()}catch{v.error({position:"topRight",progressBarColor:"#B51B1B",message:"Something went wrong while loading review",messageColor:"#FAFAFB",backgroundColor:"#EF4040"}),c.buttons.classList.add("is-hidden"),c.errorMsg.classList.remove("is-hidden")}};oe();const ae="/bc_74_vladyslav-avrashov/assets/icons-BcwaTOFK.svg#close-icon",l=document.querySelector(".form_input"),re=document.querySelector(".form_textarea"),y=document.querySelector(".form_input_icon"),ie=document.querySelector(".form_btn"),ne=document.querySelector(".form");function ce(e){return/^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(e)}function le(){l.addEventListener("input",function(){ce(l.value)?(y.style.display="block",l.style.color="light-dark(#292929, #f0f0f0)"):(y.style.display="none",l.style.color="#E74A3B")})}le();const de=async e=>{e.preventDefault();const o=l.value.trim(),s=re.value.trim();if(!o||!s){v.error({title:"Error",message:"Please fill in all fields before submitting.",position:"topRight",timeout:5e3});return}const r={email:o,comment:s};try{const t=await fetch("https://portfolio-js.b.goit.study/api/requests",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(r)}),a=await t.json();t.ok?(ve(a.title,a.message),ne.reset(),y.style.display="none"):v.error({title:"Error",message:a.message,position:"topRight",timeout:5e3})}catch(t){v.error({title:"Error",message:t.message,position:"topRight",timeout:5e3})}},ve=(e,o)=>{let s=document.createElement("div");s.classList.add("backdrop"),s.innerHTML=`
+    <div class="modal">
+        <svg class="modal_icon" aria-label="Close" width="24px" height="24px">
+            <use href="${ae}"></use>
+        </svg>
+        <p class="modal_title">${e}</p>
+        <p class="modal_text">${o}</p>
+    </div>
+    `,document.body.appendChild(s);const r=s.querySelector(".modal_icon");s.classList.add("is-open"),document.body.style.overflow="hidden";const t=()=>{s.classList.remove("is-open"),document.body.style.overflow=""};r.addEventListener("click",t),s.addEventListener("click",a=>{a.target===s&&t()}),document.addEventListener("keydown",a=>{a.key==="Escape"&&t()})};ie.addEventListener("click",de);
+//# sourceMappingURL=index.js.map
